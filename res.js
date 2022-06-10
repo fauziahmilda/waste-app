@@ -16,18 +16,18 @@ exports.oknested = function (values, res) {
   //akumulasi
   const hasil = values.reduce((ekumulasikan, item) => {
     //menentukan key group
-    if (akumulasikan(item.nama)) {
+    if (akumulasikan(item.nama_user)) {
       //buat var group transaksi
-      const group = akumulasikan[item.nama];
+      const group = akumulasikan[item.nama_user];
       //cek jika isi array adalah transaksi
       if (Array.isArray(grop.transaksi)) {
         //tambahkan val ke dalam group transaksi
-        group.transaksi.push(item.matakuliah);
+        group.transaksi.push(item.nama_sampah);
       } else {
         group.transaksi = [group.transaksi, item.transaksi];
       }
     } else {
-      akumulasikan[item.nama] = item;
+      akumulasikan[item.nama_user] = item;
     }
     return akumulasikan;
   }, {});
