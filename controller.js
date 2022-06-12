@@ -63,6 +63,7 @@ exports.addTransaction = function (req, res) {
   var id_sampah = req.body.id_sampah;
   var id_jasa = req.body.id_jasa;
   var id_user = req.body.id_user;
+  var id_transaksi = req.body.id_transaksi;
   connection.query(
     "INSERT INTO transaksi (date_transaksi, total_harga, berat_sampah, id_sampah, id_jasa, id_user) VALUES(?,?,?,?,?,?)",
     [date, total_harga, berat_sampah, id_sampah, id_jasa, id_user],
@@ -74,6 +75,17 @@ exports.addTransaction = function (req, res) {
       }
     }
   );
+  // connection.query(
+  //   "INSERT INTO history (id_transaksi, id_sampah, id_jasa, id_user) VALUES(?,?,?,?)",
+  //   [id_transaksi, id_sampah, id_jasa, id_user],
+  //   function (error, rows, fields) {
+  //     if (error) {
+  //       console.log(error);
+  //     } else {
+  //       response.ok("Berhasil menambahkan data", res);
+  //     }
+  //   }
+  // );
 };
 
 //menampilkan data history: PAGE - HISTORY
