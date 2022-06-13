@@ -9,6 +9,7 @@ const conn = mysql.createConnection({
   // database: "waste",
 
   host: "104.154.30.56",
+  port: "3306",
   user: "waste-app-user",
   password: "wasteapp101",
   database: "waste",
