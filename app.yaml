@@ -1,7 +1,5 @@
 runtime: nodejs16
 
-service: wastease-service-account
-
 env_variables:
   INSTANCE_UNIX_SOCKET: /cloudsql/fluent-stratum-345612:us-central1:waste-app
   DB_USER: waste-app-user
