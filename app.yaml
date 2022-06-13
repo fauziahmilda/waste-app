@@ -2,10 +2,10 @@ runtime: nodejs16
 
 env_variables:
   # INSTANCE_UNIX_SOCKET: /cloudsql/fluent-stratum-345612:us-central1:waste-app
-  DB_USER: waste-app-user
-  DB_NAME: waste
-  DB_PASS: wasteapp101
-  DB_INSTANCE: fluent-stratum-345612:us-central1:waste-app
+  CLOUD_SQL_USERNAME: waste-app-user
+  CLOUD_SQL_PASSWORD: wasteapp101
+  CLOUD_SQL_DATABASE_NAME: waste
+  CLOUD_SQL_CONNECTION_NAME: fluent-stratum-345612:us-central1:waste-app
   # TESTVAR: "hehehe"
   # TWILIO_SID: "XYZ1234PBJ"
   # TWILIO_AUTH_TOKEN: "XYZ1234PBJ"
